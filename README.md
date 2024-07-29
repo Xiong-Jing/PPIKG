@@ -1,5 +1,5 @@
 ## PPIKG
-paper titled A Novel Approach for Target Deconvolution from Phenotype-based Screening Using Knowledge Graph.
+paper titled A Novel Approach for Target Deconvolution from a Phenotype-based Screening Using a Knowledge Graph.
 PPIKG is also available online at http://43.153.4.4:8000/ppi.
 
 
