@@ -11,9 +11,6 @@ raw_word_vec = model.wv.vectors
 words = open("words.txt", encoding="utf-8").readlines()
 words = [word.replace("\n", "") for word in words]
 
-
-
-
 wordList = open("union.txt", encoding="utf-8").readlines()
 wordList = [word.replace("\n", "").split('_')[0] for word in wordList]
 wordList = list(set(wordList) & set(words))
