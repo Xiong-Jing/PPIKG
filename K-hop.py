@@ -23,7 +23,7 @@ query_template = (
 
 # Establish a session with the driver to interact with the database
 with driver.session() as session:
-    # 执行Cypher查询
+    # Execute Cypher Query
     result = session.run(
         query_template.format(k_value),
         source=source_protein_name,
