@@ -1,27 +1,27 @@
 from neo4j import GraphDatabase
 import csv
 
-# 配置Neo4j连接
-uri = "bolt://localhost:7687"  # 假设Neo4j运行在默认的7687端口
+# Neo4j Connection
+uri = "bolt://localhost:7687"  # the port of Neo4j
 user = "neo4j"
 password = "neo4j"
 
-# 创建驱动程序实例以管理数据库连接
+# Neo4j data driver config
 driver = GraphDatabase.driver(uri, auth=(user, password))
 
-# 定义K值和蛋白质名称
-k_value = 2  # 你可以修改这个值
+# Define K value and protein name
+k_value = 2  # it can be setted by user
 source_protein_name = "source protein name"
 destination_protein_name = "destination protein name"
 
-# Cypher查询模板
+# Cypher query template
 query_template = (
     "MATCH p=(n)-[:interaction*{}]-(m) "
     "WHERE n.name = $source AND m.name = $destination "
     "RETURN count(p) AS path_count"
 )
 
-# 使用with语句确保连接正确关闭
+# Establish a session with the driver to interact with the database
 with driver.session() as session:
     # 执行Cypher查询
     result = session.run(
@@ -30,19 +30,19 @@ with driver.session() as session:
         destination=destination_protein_name
     )
 
-    # 检查查询结果
+    # Check the query results
     for record in result:
         path_count = record["path_count"]
         print(f"Number of paths (K={k_value}): {path_count}")
 
-# 将结果写入CSV文件
+# Save the results to a CSV file
 with open("K-hop.csv", mode='w', newline='') as file:
     writer = csv.writer(file)
-    # 写入标题行
+    # Create a table header
     writer.writerow(["K-Hop", "Path_Count"])
 
-    # 假设我们只对单个K值感兴趣，这里只写入一行数据
+    # Assuming we are only interested in a single K value. write one line of data here 
     writer.writerow([k_value, path_count])
 
-# 关闭驱动程序
+# Close the database driver
 driver.close()
