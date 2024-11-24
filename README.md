@@ -1,6 +1,6 @@
 ## PPIKG
 paper Target Deconvolution in Phenotypic Screening: A Novel Knowledge Graph-Enhanced Method.
-PPIKG is also available online at http://43.153.4.4:8000/ppi.
+The data for building PPIKG can be obtained from the link: https://pan.baidu.com/s/1UXyaJhzs5IaqosewHW-eQQ?pwd=data.
 
 
 ## Availability of data source for PPIKG 
