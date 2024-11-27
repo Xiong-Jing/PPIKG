@@ -14,3 +14,17 @@ The data for constructing the PPIKG can be obtained from the link: https://pan.b
 
 ## wikipedia-pubmed-and-PMC-w2v.bin Download
 http://evexdb.org/pmresources/vec-space-models/wikipedia-pubmed-and-PMC-w2v.bin
+
+## Environment Configuration
+```bash
+git clone https://github.com/Xiong-Jing/PPIKG.git
+cd PPIKG
+```
+```bash
+conda create -n PPIKG python=3.9
+conda activate PPIKG
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
+
+

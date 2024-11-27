@@ -1,0 +1,10 @@
+gensim==3.8.0
+neo4j-driver==4.2.5
+py2neo==4.3.0
+matplotlib==3.8.2
+numpy==1.26.4
+pandas==2.2.0
+scikit-learn==1.1.1
+scipy==1.11.1
+threadpoolctl==3.2.0
+Pillow==10.2.0
