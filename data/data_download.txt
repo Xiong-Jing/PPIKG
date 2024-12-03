@@ -1,1 +1,1 @@
-The data for building ppikg can be obtained from the link: https://pan.baidu.com/s/1UXyaJhzs5IaqosewHW-eQQ?pwd=data.
+The PPIKG is stored in the Neo4j graph database, and its data files can be downloaded from https://pan.baidu.com/s/1UXyaJhzs5IaqosewHW-eQQ?pwd=data.
